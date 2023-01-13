@@ -31,7 +31,7 @@ stages:
     # Use Terraform to create the Infrastructure      
     # Install Terraform on the pipeline agent 
     - task: TerraformInstaller@0
-      displayName: 'Terrafom installation'
+      displayName: 'Terrafom installation 1.2.9'
       inputs:
         terraformVersion: '1.2.9'
     
