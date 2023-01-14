@@ -25,7 +25,7 @@ stages:
   - job: BuildInfrastructure
     steps:
     # Install Terraform on the pipeline agent 
-    - task:
+  
 
    - task: TerraformInstaller
       displayName: 'install terraform'
