@@ -11,7 +11,7 @@ stages:
       displayName: Terraform
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: test
+        name: udacity
       steps:
       - task: DownloadSecureFile@1
         name: terraform
