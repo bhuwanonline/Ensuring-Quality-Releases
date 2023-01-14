@@ -9,9 +9,7 @@ stages:
     jobs:
     - job: TerraformTasks
       displayName: Terraform
-      pool:
-        vmImage: 'Ubuntu-20.04'
-        name: udacity
+     
       steps:
       - task: DownloadSecureFile@1
         name: terraform
