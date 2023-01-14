@@ -82,7 +82,7 @@ stages:
     - job: Build
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: sontv13
+        name: udacity
       steps:
       - task: ArchiveFiles@2
         displayName: Archive FakeRestAPI
@@ -117,7 +117,7 @@ stages:
     - deployment: FakeRestAPI
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: sontv13
+        name: udacity
       environment: 'VM-ENV'
       strategy:
         runOnce:
@@ -127,7 +127,7 @@ stages:
               displayName: 'Deploy Azure Web App'
               inputs:
                 azureSubscription: 'myServiceConnection'
-                appName: 'sontv-app-project3-AppService'
+                appName: 'udacity-app-project3-AppService'
                 appType: webApp
                 package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
                 deploymentMethod: auto          
@@ -200,7 +200,7 @@ stages:
         displayName: Performance testing
         pool:
           vmImage: 'Ubuntu-20.04'
-          name: sontv13
+          name: udacity
         steps:
           - bash: |
               sudo apt-get install openjdk-11-jre-headless -y
@@ -249,7 +249,7 @@ stages:
         displayName: Postman Test
         pool:
             vmImage: 'Ubuntu-20.04'
-            name: sontv13
+            name: udacity
         steps: 
           - task: NodeTool@0
             displayName: Install Node v14.X
