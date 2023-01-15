@@ -11,33 +11,32 @@ stages:
       inputs:
         script: 'sudo npm install -g newman'
         workingDirectory: $(System.DefaultWorkingDirectory)
-    # Postman Data Validation Test Suite    
-    # ToDo: Verify the working directory and the newman scripts
+
+     - task: CmdLine@2
+      displayName: create log directory
+      inputs:
+        script: 'mkdir -p log/newman'
+        workingDirectory: $(System.DefaultWorkingDirectory)
+
+    # Postman Validation Test Suite 
     - task: CmdLine@2
       displayName: Run Data Validation Tests
-      continueOnError: true
       inputs:
-        script:           # ToDo: Write your commands
-        workingDirectory: '$(System.DefaultWorkingDirectory)/automatedtesting/postman'
+        script: 'newman run automatedtesting/postman/udacity-project3-ValTest.postman_collection.json -e automatedtesting/postman/Env.ValidationTest.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/ValidationTest.xml --suppress-exit-code'        
+      continueOnError: true    
+  
     # Postman Regression Test Suite        
     - task: CmdLine@2
       displayName: Run Regression Tests
       continueOnError: true
       inputs:
-        script: 'newman run automatedtesting/postman/RegressionTestSuite.json -e automatedtesting/postman/RegressionTestSuite.Environment.json --delay-request 5000 --bail newman -x --reporters cli,junit --reporter-junit-export Results/RegressionTests.xml'
-        workingDirectory: '$(System.DefaultWorkingDirectory)'
-     # Postman Validation Test Suite 
-    - task: CmdLine@2
-      displayName: Run Data Validation Tests
-      inputs:
-        script: 'newman run automatedtesting/postman/DataValidationTestSuite.json -e automatedtesting/postman/DataValidationTestSuite.Environment.json --delay-request 5000 --bail newman -x --reporters cli,junit --reporter-junit-export Results/DataValidationTests.xml'
-        workingDirectory: '$(System.DefaultWorkingDirectory)'
-      continueOnError: true
+        script: 'newman run automatedtesting/postman/udacity-project3-ReTest.postman_collection.json -e automatedtesting/postman/Env.RegressionTest.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/RegressionTest.xml --suppress-exit-code'
+    
+    
      # ToDo: Complete the task as explained here: https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-test-results?view=azure-devops&tabs=trx%2Cyaml#yaml-snippet
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'JUnit'
-        testResultsFiles:  '$(System.DefaultWorkingDirectory)/log/newman/TEST-*.xml'
-        searchFolder: '$(System.DefaultWorkingDirectory)'
+        testResultsFiles:  $(System.DefaultWorkingDirectory)/log/newman/*.xml'
         mergeTestResults: true
         testRunTitle: 'Postman Tests'
