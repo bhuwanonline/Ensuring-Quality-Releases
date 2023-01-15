@@ -22,7 +22,7 @@ stages:
     - task: CmdLine@2
       displayName: Run Data Validation Tests
       inputs:
-        script: 'newman run automatedtesting/postman/udacity-project3-ValTest.postman_collection.json -e automatedtesting/postman/Env.ValidationTest.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/ValidationTest.xml --suppress-exit-code'        
+        script: 'newman run automatedtesting/postman/validationTestUdacity.postman_collection.json -e automatedtesting/postman/testingenvironment.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/ValidationTest.xml --suppress-exit-code'        
       continueOnError: true    
   
     # Postman Regression Test Suite        
@@ -30,7 +30,7 @@ stages:
       displayName: Run Regression Tests
       continueOnError: true
       inputs:
-        script: 'newman run automatedtesting/postman/udacity-project3-ReTest.postman_collection.json -e automatedtesting/postman/Env.RegressionTest.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/RegressionTest.xml --suppress-exit-code'
+        script: 'newman run automatedtesting/postman/regressionTestUdacity.postman_collection.json -e automatedtesting/postman/testingenvironment.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/RegressionTest.xml --suppress-exit-code'
     
     
      # ToDo: Complete the task as explained here: https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/test/publish-test-results?view=azure-devops&tabs=trx%2Cyaml#yaml-snippet
