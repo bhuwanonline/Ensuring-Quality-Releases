@@ -42,7 +42,7 @@ stages:
         command: 'init'
         commandOptions: '-backend-config=$(azurecreds.secureFilePath)'
         backendServiceArm: 'azurerm-sc'
-        backendAzureRmResourceGroupName: 'tstate'
+        backendAzureRmResourceGroupName: 'udacity-azure-devops'
         backendAzureRmStorageAccountName: 'tfstate17013515'
         backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'test.terraform.tfstate'
