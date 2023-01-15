@@ -48,7 +48,6 @@ stages:
         backendAzureRmKey: 'test.terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
 
-
     - task: AzureCLI@1
       displayName: Set Environment Variables for Terraform
       inputs:
