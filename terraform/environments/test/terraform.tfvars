@@ -6,7 +6,7 @@ tenant_id = "964c9809-5228-4fb6-84cb-eb4899417763"
 
 # Resource Group/Location
 location = "East US"
-resource_group = "Azuredevops"
+resource_group = "udacity-azure-devops"
 application_type = "my-application"
 
 # Network
