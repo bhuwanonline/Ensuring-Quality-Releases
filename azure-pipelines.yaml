@@ -3,8 +3,8 @@ name: Azure Pipelines
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-trigger:
-- main
+#trigger:
+#- main
 
 # ToDo: Replace the agent pool name, if you are using Udacity Cloud lab. 
 # Otherwise, comment out the line below. 
@@ -16,9 +16,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
-  # Environment name
-  environmentName: 'test'
-
+ 
 stages:
 #--------------------------------------------#  
 # BUILD STAGE
@@ -33,7 +31,7 @@ stages:
     - task: TerraformInstaller@0
       displayName: 'Terrafom installation'
       inputs:
-        terraformVersion: '1.2.9'
+        terraformVersion: 'latest'
     
     # Run Terraform Init on the pipeline agent 
     # ToDo: Replace the resource group name, storage account name, and container name below
@@ -45,7 +43,7 @@ stages:
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
         backendServiceArm: '$(azureServiceConnectionId)'
         backendAzureRmResourceGroupName: 'Azuredevops'
-        backendAzureRmStorageAccountName: 'tfstate281845088'
+        backendAzureRmStorageAccountName: 'tfstate2800319431'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'test.terraform.tfstate'
 
