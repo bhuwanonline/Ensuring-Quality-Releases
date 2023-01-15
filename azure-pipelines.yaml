@@ -6,7 +6,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-      - task: ArchiveFiles@2
+    - task: ArchiveFiles@2
       displayName: Archive FakeRestAPI
       inputs:
         rootFolderOrFile: '$(System.DefaultWorkingDirectory)/fakerestapi'
