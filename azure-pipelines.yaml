@@ -12,7 +12,7 @@ stages:
         script: 'sudo npm install -g newman'
         workingDirectory: $(System.DefaultWorkingDirectory)
 
-     - task: CmdLine@2
+    - task: CmdLine@2
       displayName: create log directory
       inputs:
         script: 'mkdir -p log/newman'
