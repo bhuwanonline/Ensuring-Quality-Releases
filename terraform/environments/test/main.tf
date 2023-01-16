@@ -21,7 +21,7 @@ module "network" {
   virtual_network_name = "${var.virtual_network_name}"
   application_type     = "${var.application_type}"
   resource_type        = "NET"
-  resource_group       = "${var.resource_group_name}"
+  resource_group       = "${var.resource_group}"
   address_prefixes     = "${var.address_prefixes}"
 }
 
@@ -30,7 +30,7 @@ module "nsg-test" {
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "NSG"
-  resource_group   = "${var.resource_group_name}"
+  resource_group   = "${var.resource_group}"
   subnet_id        = "${module.network.subnet_id_test}"
   address_prefix_test = "${var.address_prefix_test}"
 }
@@ -39,20 +39,20 @@ module "appservice" {
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "AppService"
-  resource_group   = "${var.resource_group_name}"
+  resource_group   = "${var.resource_group}"
 }
 module "publicip" {
   source           = "../../modules/publicip"
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "publicip"
-  resource_group   = "${var.resource_group_name}"
+  resource_group   = "${var.resource_group}"
 }
 
 module "vm" {
   source               = "../../modules/vm"
   location             = "${var.location}"
-  resource_group       = "${var.resource_group_name}"
+  resource_group       = "${var.resource_group}"
   subnet_id            = "${module.network.subnet_id_test}"
   public_ip_address_id = "${module.publicip.public_ip_address_id}" 
   admin_username       = "${var.admin_username}"
