@@ -122,7 +122,7 @@ stages:
               ConnectionType: 'AzureRM'
               azureSubscription: 'azurerm-sc'
               appType: 'webApp'
-              WebAppName: 'udacitytest-AppService'
+              WebAppName: 'udacity-flask-ml-service'
               packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
               DeploymentType: zipDeploy
 
