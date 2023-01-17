@@ -103,23 +103,46 @@ Create an Azure DevOps project
   2.	Create new pipeline
   
   3.	Select GitHub and then your GitHub repository:
+      ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)
+
   
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
+      
+      ![pipeline-existing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212815477-bf57aefe-9216-45a9-9682-cc0eb9a6597f.png)
+
+      ![pipeline-choosing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212815438-23e0205b-8a84-47cc-92b8-103a3f87cae3.png)
+
   
 Configuring the VM as a Resource
   
   Click on Environments and you should see an environment named Test. Click on it.
+  
+    ![agent registration-1](https://user-images.githubusercontent.com/20974800/212815784-f4d729f4-ecb4-4447-952e-bd195d26e2eb.png)
+
+
+    ![agent registration-2](https://user-images.githubusercontent.com/20974800/212815806-79b43def-6908-4ba1-8852-db3ba0348eea.png)
+
+
+    ![Environment test VM](https://user-images.githubusercontent.com/20974800/212815614-e151b1e2-dcf2-4faa-9e51-163be25dac71.png)
+
   click on Add resource and select Virtual Machine.
+  
+    ![Environment test VM - 2](https://user-images.githubusercontent.com/20974800/212815648-48cd0b19-4fc2-4d72-b16c-516d4f8d0fe3.png)
+    
+     
   Select Linux as the OS. You'll then need to copy the registration script to your clipboard and run this on the VM terminal.
 
   If everything was successful, you should see this output from the connection test:
+    
+    ![Environment test VM - 2](https://user-images.githubusercontent.com/20974800/212815964-1eddd79a-5674-49a5-9203-d5c5de7816b6.png)
 
   Back on Azure DevOps portal in Environments, you can close out the Add resource menu and refresh the page. You should now see the newly added VM resource
   listed   under Resources.
 
-  Adding service connection
+Adding service connection
+  
   Go to project settings and then to service connections:
-
+    
   Click on "New service connection" and select "Azure Resource Manager"
 
   Select "Service principal (automatic)":
@@ -129,12 +152,30 @@ Configuring the VM as a Resource
   Create a Service Principal for Terraform
 
   Run the pipeline
+  
   Go to the pipelines overview
+  
+     ![pipeline summary](https://user-images.githubusercontent.com/20974800/212816489-a7fc14ac-ce31-4413-b8f5-47d2667d9a78.png)
+
+    
+    ![pipeline summary tests](https://user-images.githubusercontent.com/20974800/212816464-c23de301-5b43-4ea6-8024-95bacaa924d8.png)
+
+  
   Run the new pipeline:
+  
   Configure Azure Monitor
+  
   Go to the Azure Portal, select your application service and create a new alert in the "Monitoring" group:
 
+      ![create an alert rule](https://user-images.githubusercontent.com/20974800/212816175-23ee6a67-186a-49e7-8f49-bbe91776d619.png)
 
+      ![Create action group](https://user-images.githubusercontent.com/20974800/212816188-c0539534-cf02-4fa7-ae57-c1367b73b3e7.png)
+      
+      ![Email MyAppservice action group](https://user-images.githubusercontent.com/20974800/212816303-935efe5e-da36-402d-be4f-ac293f2a192e.png)
+
+      ![Alert metrics](https://user-images.githubusercontent.com/20974800/212816347-4ed8ae78-d916-4775-9ac7-56e80b00ec94.png)
+
+      ![Email 3 page not found](https://user-images.githubusercontent.com/20974800/212816381-ff106925-8d4a-4b56-95ac-fd064ea857c8.png)
 
 
 
