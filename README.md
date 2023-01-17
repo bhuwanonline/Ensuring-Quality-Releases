@@ -104,15 +104,14 @@ Create an Azure DevOps project
   
   3.	Select GitHub and then your GitHub repository:
   
-  ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)
-  
+  ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)  
+
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
       
       ![pipeline-existing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212815477-bf57aefe-9216-45a9-9682-cc0eb9a6597f.png)
 
       ![pipeline-choosing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212815438-23e0205b-8a84-47cc-92b8-103a3f87cae3.png)
 
-  
 Configuring the VM as a Resource
   
   Click on Environments and you should see an environment named Test. Click on it.
