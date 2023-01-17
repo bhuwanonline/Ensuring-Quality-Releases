@@ -153,15 +153,18 @@ Adding service connection
 
   Run the pipeline
   
-  Go to the pipelines overview
-  
-     ![pipeline summary](https://user-images.githubusercontent.com/20974800/212816489-a7fc14ac-ce31-4413-b8f5-47d2667d9a78.png)
-
+  Go to the pipelines overview    
+    
+    ![pipeline summary](https://user-images.githubusercontent.com/20974800/212816489-a7fc14ac-ce31-4413-b8f5-47d2667d9a78.png)    
     
     ![pipeline summary tests](https://user-images.githubusercontent.com/20974800/212816464-c23de301-5b43-4ea6-8024-95bacaa924d8.png)
+    
+    ![image](https://user-images.githubusercontent.com/20974800/212825041-08ef7c0f-db06-422f-8698-b5addb9b82e8.png)
+    
+    ![image](https://user-images.githubusercontent.com/20974800/212825179-90f0f1e9-4199-4d84-9918-f49eef4ad365.png)
+    
+    ![image](https://user-images.githubusercontent.com/20974800/212825407-76443d3e-4f87-47ba-a7ef-939deaed5745.png)
 
-  
-  Run the new pipeline:
   
   Configure Azure Monitor
   
