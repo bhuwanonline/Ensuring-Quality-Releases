@@ -176,6 +176,13 @@ Adding service connection
       ![Alert metrics](https://user-images.githubusercontent.com/20974800/212816347-4ed8ae78-d916-4775-9ac7-56e80b00ec94.png)
 
       ![Email 3 page not found](https://user-images.githubusercontent.com/20974800/212816381-ff106925-8d4a-4b56-95ac-fd064ea857c8.png)
+      
+   Log Capturing:
+   
+   ![image](https://user-images.githubusercontent.com/20974800/212823473-4f5a7609-056a-49fa-ad44-f8c6b2f3c0bb.png)
+
+    ![image](https://user-images.githubusercontent.com/20974800/212823657-2008d6c7-7a20-40a1-824b-611c8ae8c7b9.png)
+
 
 
 
