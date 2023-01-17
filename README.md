@@ -168,18 +168,26 @@ Adding service connection
   Go to the Azure Portal, select your application service and create a new alert in the "Monitoring" group:
 
       ![create an alert rule](https://user-images.githubusercontent.com/20974800/212816175-23ee6a67-186a-49e7-8f49-bbe91776d619.png)
+      
 
       ![Create action group](https://user-images.githubusercontent.com/20974800/212816188-c0539534-cf02-4fa7-ae57-c1367b73b3e7.png)
       
+      
       ![Email MyAppservice action group](https://user-images.githubusercontent.com/20974800/212816303-935efe5e-da36-402d-be4f-ac293f2a192e.png)
 
+      
       ![Alert metrics](https://user-images.githubusercontent.com/20974800/212816347-4ed8ae78-d916-4775-9ac7-56e80b00ec94.png)
 
+      
       ![Email 3 page not found](https://user-images.githubusercontent.com/20974800/212816381-ff106925-8d4a-4b56-95ac-fd064ea857c8.png)
       
    Log Capturing:
    
    ![image](https://user-images.githubusercontent.com/20974800/212823473-4f5a7609-056a-49fa-ad44-f8c6b2f3c0bb.png)
+   
+   
+   ![image](https://user-images.githubusercontent.com/20974800/212824277-84d73596-17d8-4bc8-a843-913393acecb8.png)
+
 
    
    ![image](https://user-images.githubusercontent.com/20974800/212823657-2008d6c7-7a20-40a1-824b-611c8ae8c7b9.png)
