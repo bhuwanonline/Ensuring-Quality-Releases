@@ -105,7 +105,7 @@ Create an Azure DevOps project
   3.	Select GitHub and then your GitHub repository:
   
   ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)  
-
+  
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
       
       ![pipeline yaml file](https://user-images.githubusercontent.com/20974800/212825978-c7970561-c5a6-4cce-962b-1998cc2bd05c.png)
@@ -129,8 +129,8 @@ Configuring the VM as a Resource
   Select Linux as the OS. You'll then need to copy the registration script to your clipboard and run this on the VM terminal.
 
   If everything was successful, you should see this output from the connection test:
-    
-    ![Environment test VM - 2](https://user-images.githubusercontent.com/20974800/212815964-1eddd79a-5674-49a5-9203-d5c5de7816b6.png)
+  
+  ![Environment test VM - 2](https://user-images.githubusercontent.com/20974800/212815964-1eddd79a-5674-49a5-9203-d5c5de7816b6.png)
 
   Back on Azure DevOps portal in Environments, you can close out the Add resource menu and refresh the page. You should now see the newly added VM resource
   listed   under Resources.
@@ -149,19 +149,17 @@ Adding service connection
 
   Run the pipeline
   
-  Go to the pipelines overview    
-    
-    ![pipeline summary](https://user-images.githubusercontent.com/20974800/212816489-a7fc14ac-ce31-4413-b8f5-47d2667d9a78.png)    
-    
-    ![pipeline summary tests](https://user-images.githubusercontent.com/20974800/212816464-c23de301-5b43-4ea6-8024-95bacaa924d8.png)
-    
-    ![image](https://user-images.githubusercontent.com/20974800/212825041-08ef7c0f-db06-422f-8698-b5addb9b82e8.png)
-    
-    ![image](https://user-images.githubusercontent.com/20974800/212825179-90f0f1e9-4199-4d84-9918-f49eef4ad365.png)
-    
-    ![image](https://user-images.githubusercontent.com/20974800/212825407-76443d3e-4f87-47ba-a7ef-939deaed5745.png)
+  Go to the pipelines overview
+  ![pipeline summary](https://user-images.githubusercontent.com/20974800/212816489-a7fc14ac-ce31-4413-b8f5-47d2667d9a78.png)
 
-  
+  ![pipeline summary tests](https://user-images.githubusercontent.com/20974800/212816464-23de301-5b43-4ea6-8024-95bacaa924d8.png)
+
+  ![image](https://user-images.githubusercontent.com/20974800/212825041-08ef7c0f-db06-422f-8698-b5addb9b82e8.png)
+
+  ![image](https://user-images.githubusercontent.com/20974800/212825179-90f0f1e9-4199-4d84-9918-f49eef4ad365.png)
+
+  ![image](https://user-images.githubusercontent.com/20974800/212825407-76443d3e-4f87-47ba-a7ef-939deaed5745.png)
+
   Configure Azure Monitor
   
   Go to the Azure Portal, select your application service and create a new alert in the "Monitoring" group:
