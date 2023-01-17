@@ -2,7 +2,10 @@
 Project: Ensuring Quality Releases
 
 Introduction
-  In this project we create disposable test environments and run a variety of automated tests with the click of a button. Additionally, we monitor and provide insight   into an application's behaviour, and determine root causes by querying the application’s custom log files.
+  In this project, you'll develop and demonstrate your skills in using a variety of industry leading tools, especially Microsoft Azure, to create disposable test environments and run a variety of automated tests with the click of a button. Additionally, you'll monitor and provide insight into your application's behavior, and determine root causes by querying the application’s custom log files.
+  
+  ![image](https://user-images.githubusercontent.com/20974800/212813810-0aada9e2-68f0-46ca-8395-db3752ce3aa6.png)
+
 
 For this project we use the following tools:
   •	Azure DevOps: For creating a CI/CD pipeline to run Terraform scripts and execute tests with Selenium, Postman and Jmeter
@@ -25,18 +28,6 @@ Install the following tools:
   o	Python
   o	Selenium
 
-Getting Started
-  Steps:
-    1.	Install our dependencies
-    2.	Configure storage account and state backend for Terraform
-    3.	Create a Service Principal for Terraform
-    4.	Configure Pipeline Environment
-    5.	Configure an Azure Log Analytics Workspace
-    6.	Create Postman Test Suites
-    7.	Create a Selenium test for a website
-    8.	Create a Test Suite with JMeter
-    9.	Enable Monitoring & Observability
-
 Instructions
   1) Execute the create-tf-storage.sh script
   2) Update terraform/main.tf with the Terraform storage account and state backend configuration variables:
@@ -44,6 +35,7 @@ Instructions
     •	storage_account_name: The name of the Azure Storage account
     •	container_name: The name of the blob container
     •	key: The name of the state store file to be created
+    
     terraform {
       backend "azurerm" {
         resource_group_name  = "tstate"
