@@ -107,13 +107,13 @@ Create an Azure DevOps project
   ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)  
 
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
-
+      
       ![pipeline yaml file](https://user-images.githubusercontent.com/20974800/212825978-c7970561-c5a6-4cce-962b-1998cc2bd05c.png)
-
+      
       ![pipeline-choosing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212826017-feb9d7b6-5af6-4b6f-ab3a-3874540eea78.png)
-
+      
 Configuring the VM as a Resource
-  
+
   Click on Environments and you should see an environment named Test. Click on it.
   
   ![agent registration-1](https://user-images.githubusercontent.com/20974800/212815784-f4d729f4-ecb4-4447-952e-bd195d26e2eb.png)
@@ -125,8 +125,7 @@ Configuring the VM as a Resource
   click on Add resource and select Virtual Machine.
   
   ![Environment test VM - 2](https://user-images.githubusercontent.com/20974800/212815648-48cd0b19-4fc2-4d72-b16c-516d4f8d0fe3.png)
-    
-     
+       
   Select Linux as the OS. You'll then need to copy the registration script to your clipboard and run this on the VM terminal.
 
   If everything was successful, you should see this output from the connection test:
