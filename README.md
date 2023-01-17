@@ -103,8 +103,8 @@ Create an Azure DevOps project
   2.	Create new pipeline
   
   3.	Select GitHub and then your GitHub repository:
-      ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)
-
+  
+  ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)
   
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
       
