@@ -8,19 +8,28 @@ Introduction
 
 
 For this project we use the following tools:
+
   •	Azure DevOps: For creating a CI/CD pipeline to run Terraform scripts and execute tests with Selenium, Postman and Jmeter
+  
   •	Terraform: For creating Azure infrastructure as code (IaS)
+  
   •	Postman: For creating a regression test suite and publish the results to Azure Pipelines.
+  
   •	Selenium: For creating a UI test suite for a website.
+  
   •	JMeter: For creating a Stress Test Suite and an Endurance Test Suite.
+  
   •	Azure Monitor: For configuring alerts to trigger given a condition from an App Service.
 
 Dependencies
+
 The following are the dependencies of the project you will need:
+  
   •	Create an Azure Account
   •	Create an Azure DevOps Account
 
 Install the following tools:
+  
   o	Azure command line interface
   o	Terraform
   o	JMeter
@@ -29,6 +38,7 @@ Install the following tools:
   o	Selenium
 
 Instructions
+  
   1) Execute the create-tf-storage.sh script
   2) Update terraform/main.tf with the Terraform storage account and state backend configuration variables:
 
@@ -62,6 +72,7 @@ Rename terraform/environments/test/terraform.tfvars.example to terraform.tfvars 
 Executing Terraform
 
 Terraform creates the following resources for a specific environment tier:
+  
   •	App Service
   •	App Service Plan
   •	Network
@@ -78,12 +89,15 @@ Use the following commands to create the infrastructure:
   terraform apply solution.plan
 
 Setting up Azure DevOps
+  
   Logged into the https://portal.azure.com/
   Logged into the https://dev.azure.com/ in a separate browser tab.
 
 Create an Azure DevOps project
+  
   Next, we'll need to create an Azure DevOps project and connect to Azure. The screenshots below show the steps, but if you need to, you can also refer to
   the official documentation for more detail.
+  
   1.	Create new project and name it
       
   2.	Create new pipeline
@@ -92,14 +106,16 @@ Create an Azure DevOps project
   
   4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
   
-  Configuring the VM as a Resource
+Configuring the VM as a Resource
+  
   Click on Environments and you should see an environment named Test. Click on it.
   click on Add resource and select Virtual Machine.
   Select Linux as the OS. You'll then need to copy the registration script to your clipboard and run this on the VM terminal.
 
   If everything was successful, you should see this output from the connection test:
 
-  Back on Azure DevOps portal in Environments, you can close out the Add resource menu and refresh the page. You should now see the newly added VM resource listed under Resources.
+  Back on Azure DevOps portal in Environments, you can close out the Add resource menu and refresh the page. You should now see the newly added VM resource
+  listed   under Resources.
 
   Adding service connection
   Go to project settings and then to service connections:
