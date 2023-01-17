@@ -106,11 +106,13 @@ Create an Azure DevOps project
   
   ![pipeline-choosing repo](https://user-images.githubusercontent.com/20974800/212815356-c5f74dfa-8142-45c5-92d2-ca40bf023dc1.png)  
   
-  4.	Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
-      
-      ![pipeline yaml file](https://user-images.githubusercontent.com/20974800/212825978-c7970561-c5a6-4cce-962b-1998cc2bd05c.png)
-      
-      ![pipeline-choosing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212826017-feb9d7b6-5af6-4b6f-ab3a-3874540eea78.png)
+  4.Configure your pipeline by choosing "Existing Azure Pipelines YAML File" and select the azure-piplines.yaml file in the menu that pops out on the right:
+
+  ![pipeline yaml file](https://user-images.githubusercontent.com/20974800/212825978-c7970561-c5a6-4cce-962b-1998cc2bd05c.png)
+
+  ![pipeline-choosing azure pipeline yaml](https://user-images.githubusercontent.com/20974800/212826017-feb9d7b6-5af6-4b6f-ab3a-3874540eea78.png)
+  
+  
       
 Configuring the VM as a Resource
 
