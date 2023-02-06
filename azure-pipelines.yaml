@@ -1,9 +1,6 @@
 variables:
  - group: azurecreds
 
-trigger:
-- master
-
 stages:
 - stage: Provision
   jobs:
