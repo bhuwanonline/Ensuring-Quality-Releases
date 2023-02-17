@@ -42,7 +42,7 @@ stages:
         backendAzureRmResourceGroupName: 'azure_devOps_udacity-rg'
         backendAzureRmStorageAccountName: 'tfstate2800319431'
         backendAzureRmContainerName: 'tstate'
-        backendAzureRmKey: 'test.terraform.tstate'
+        backendAzureRmKey: 'terraform.tstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
 
     - task: AzureCLI@1
