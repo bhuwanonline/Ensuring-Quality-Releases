@@ -41,7 +41,7 @@ stages:
         backendServiceArm: 'azurerm-sc'
         backendAzureRmResourceGroupName: 'azure_devOps_udacity-rg'
         backendAzureRmStorageAccountName: 'tfstate2800319431'
-        backendAzureRmContainerName: 'tfstate'
+        backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'test.terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
 
