@@ -39,7 +39,7 @@ stages:
         command: 'init'
         commandOptions: '-backend-config=$(azurecreds.secureFilePath)'
         backendServiceArm: 'azurerm-sc'
-        backendAzureRmResourceGroupName: 'azure_devOps_udacity-rg'
+        backendAzureRmResourceGroupName: 'Azuredevops'
         backendAzureRmStorageAccountName: 'tfstate2800319431'
         backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'terraform.tstate'
@@ -64,7 +64,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'apply'
-        commandOptions: '-auto-approve -lock=false'
+        commandOptions: '-auto-approve'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
         environmentServiceNameAzureRM: 'azurerm-sc'
 
