@@ -237,15 +237,17 @@ stages:
         mkdir -p log/newman
       displayName: Install Newman CLI
     - bash: |
-        newman run automatedtesting/postman/regression.json \                
+        newman run automatedtesting/postman/regressionTestUdacity.postman_collection.json \
+                   -e automatedtesting/postman/testingenvironment.postman_environment.json \
                    --reporters cli,junit \
-                   --reporter-junit-export automatedtesting/postman/TEST-regression.xml \
+                   --reporter-junit-export log/newman/regressionTestUdacity.xml \
                    --suppress-exit-code
       displayName: Run Regression Test
     - bash: |
-        newman run automatedtesting/postman/validation.json \
+        newman run automatedtesting/postman/validationTestUdacity.postman_collection.json \
+                   -e automatedtesting/postman/testingenvironment.postman_environment.json \
                    --reporters cli,junit \
-                   --reporter-junit-export automatedtesting/postman/TEST-validation.xml \
+                   --reporter-junit-export log/newman/validationTestUdacity.xml \
                    --suppress-exit-code
       displayName: Run Validation Test
     - task: PublishPipelineArtifact@1
