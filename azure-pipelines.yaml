@@ -126,7 +126,6 @@ stages:
             DeploymentType: "webDeploy"
               TakeAppOfflineFlag: false
               ExcludeFilesFromAppDataFlag: false
-              
   - deployment: VMDeploy
     displayName: Deploy Virtual Machine
     environment:
