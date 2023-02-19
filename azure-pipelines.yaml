@@ -114,18 +114,14 @@ stages:
     strategy:
       runOnce:
         deploy:
-          steps:
-          - task: AzureRmWebAppDeployment@4
+           - task: AzureRmWebAppDeployment@4
             inputs:
-              ConnectionType: "AzureRM"
-              azureSubscription: "azurerm-sc"
-              appType: "webApp"
-              WebAppName: "my-application-AppService"
-              Package: "$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip"
-              enableCustomDeployment: true
-              DeploymentType: "webDeploy"
-              TakeAppOfflineFlag: false
-              ExcludeFilesFromAppDataFlag: false
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'azurerm-sc'
+              appType: 'webApp'
+              WebAppName: 'my-application-AppService'
+              packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
+              DeploymentType: zipDeploy
   - deployment: VMDeploy
     displayName: Deploy Virtual Machine
     environment:
