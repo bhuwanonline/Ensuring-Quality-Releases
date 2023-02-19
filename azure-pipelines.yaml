@@ -116,7 +116,7 @@ stages:
         steps:
         - task: AzureRmWebAppDeployment@4
             inputs:
-            ConnectionType: 'AzureRM'
+              ConnectionType: 'AzureRM'
               azureSubscription: 'azurerm-sc'
               appType: 'webApp'
               WebAppName: 'my-application-AppService'
