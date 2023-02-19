@@ -123,7 +123,7 @@ stages:
               WebAppName: "my-cool-webapp"
               Package: "$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip"
               enableCustomDeployment: true
-            DeploymentType: "webDeploy"
+              DeploymentType: "webDeploy"
               TakeAppOfflineFlag: false
               ExcludeFilesFromAppDataFlag: false
   - deployment: VMDeploy
