@@ -110,18 +110,18 @@ stages:
     displayName: Deploy FakeRestAPI
     pool:
       vmImage: 'ubuntu-latest'
-    environment: 'TEST'
+      environment: 'TEST'
     strategy:
       runOnce:
         steps:
-          - task: AzureRmWebAppDeployment@4
-            inputs:
-              ConnectionType: 'AzureRM'
-              azureSubscription: 'azurerm-sc'
-              appType: 'webApp'
-              WebAppName: 'my-application-AppService'
-              packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
-              DeploymentType: zipDeploy
+        - task: AzureRmWebAppDeployment@4
+          inputs:
+            ConnectionType: 'AzureRM'
+            azureSubscription: 'azurerm-sc'
+            appType: 'webApp'
+            WebAppName: 'my-application-AppService'
+            packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
+            DeploymentType: zipDeploy
   - deployment: VMDeploy
     displayName: Deploy Virtual Machine
     environment:
