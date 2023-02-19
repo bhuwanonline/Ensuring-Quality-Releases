@@ -167,7 +167,7 @@ stages:
         deploy:
           steps:
           - task: Bash@3
-            inputs:
+          inputs:
             targetType: inline
             script: |
              #!/bin/bash
