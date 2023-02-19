@@ -118,9 +118,9 @@ stages:
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: "AzureRM"
-              azureSubscription: "Azure"
+              azureSubscription: "azurerm-sc"
               appType: "webApp"
-              WebAppName: "my-cool-webapp"
+              WebAppName: "my-application-AppService"
               Package: "$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip"
               enableCustomDeployment: true
               DeploymentType: "webDeploy"
