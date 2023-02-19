@@ -151,7 +151,7 @@ stages:
                 python3 --version 
                 export PATH=$PATH:/usr/bin/chromedriver
                 # agent log analytics
-              env:  # To use secret variables in a script, we must explicitly map them as environment variables.
+              env: # To use secret variables in a script, we must explicitly map them as environment variables.
                 AZURE_LOG_ANALYTICS_ID: $(AZURE_LOG_ANALYTICS_ID)
                 AZURE_LOG_ANALYTICS_PRIMARY_KEY: $(AZURE_LOG_ANALYTICS_PRIMARY_KEY)
               displayName: Configure VM
