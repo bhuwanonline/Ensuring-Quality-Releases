@@ -113,8 +113,8 @@ stages:
     environment: 'TEST'
     strategy:
       runOnce:
-        deploy:
-           - task: AzureRmWebAppDeployment@4
+        steps:
+          - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'azurerm-sc'
