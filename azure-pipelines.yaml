@@ -118,8 +118,8 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
               inputs:
-                azureSubscription: '8bac17cd-b77e-44ac-a5b6-808b4b3d2223'
-                appName: 'sontv-app-project3-AppService'
+                azureSubscription: '432cac81-3e81-4301-abc2-358645cce981'
+                appName: 'my-application-AppService'
                 appType: webApp
                 package: $(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip
                 deploymentMethod: auto   
