@@ -216,7 +216,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: Publish Stress Test Results
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/log/jmeter/stress-test-html-report'
+        rootFolderOrFile: 'log/jmeter/stress-test-html-report'
         includeRootFolder: false
         archiveType: zip
         archiveFile: '$(Build.ArtifactStagingDirectory)/log/jmeter/stress-test-html-report-$(Build.BuildId).zip'
@@ -224,7 +224,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: Publish Endurance Test Results
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/log/jmeter/endurance-test-html-report'
+        rootFolderOrFile: 'log/jmeter/endurance-test-html-report'
         includeRootFolder: false
         archiveType: zip
         archiveFile: '$(Build.ArtifactStagingDirectory)/log/jmeter/endurance-test-html-report-$(Build.BuildId).zip'
