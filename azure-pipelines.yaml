@@ -192,19 +192,23 @@ stages:
     pool:
       vmImage: "ubuntu-latest"
     steps:
-      - bash: |
-        sudo apt-get install openjdk-11-jre-headless -y
-        java -version
-        wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz -O jmeter.tgz
-        tar xzvf jmeter.tgz
-        echo "####################"
-        echo "jmeter version : "
-        apache-jmeter-5.5/bin/jmeter --version
-        echo "####################"
-        mkdir -p log/jmeter
-        pwd
-        ls -la
-      displayName: Install JMeter
+       - task: Bash@3
+        displayName: "Install JMeter"
+        inputs:
+          targetType: "inline"
+          script: |
+            #!/bin/bash
+            sudo apt-get install openjdk-11-jre-headless -y
+            java -version
+            wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz -O jmeter.tgz
+            tar xzvf jmeter.tgz
+            echo "####################"
+            echo "jmeter version : "
+            apache-jmeter-5.5/bin/jmeter --version
+            echo "####################"
+            mkdir -p log/jmeter
+            pwd
+            ls -la
       - task: Bash@3
         displayName: "Run JMeter stress test"
         inputs:
