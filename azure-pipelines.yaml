@@ -198,8 +198,8 @@ stages:
         wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz -O jmeter.tgz
         tar xzvf jmeter.tgz
         echo "####################"
-        echo "jmeter version : " 
-        apache-jmeter-5.5/bin/jmeter --version   
+        echo "jmeter version : "
+        apache-jmeter-5.5/bin/jmeter --version
         echo "####################"
         mkdir -p log/jmeter
         pwd
