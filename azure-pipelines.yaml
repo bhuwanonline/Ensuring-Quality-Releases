@@ -190,7 +190,7 @@ stages:
   - job: test_jmeter
     displayName: "Deploy and run JMeter tests"
     pool:
-      vmImage: "ubuntu-18.04"
+      vmImage: "ubuntu-latest"
     steps:
       - task: Bash@3
         displayName: "Install JMeter"
